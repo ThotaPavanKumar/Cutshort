@@ -3,9 +3,9 @@ import "./Text.css";
 
 export const Text = ({ heading, paragraph }) => {
   return (
-    <div>
+    <div className="textContainer">
       <h1>{heading}</h1>
-      <p>{paragraph}</p>
+      <div style={{ textAlign: "center", marginTop: "-10px" }}>{paragraph}</div>
     </div>
   );
 };
