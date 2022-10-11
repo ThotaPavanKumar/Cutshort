@@ -1,0 +1,16 @@
+.inputContainer {
+  text-align: left;
+  margin: 3% 0;
+}
+input {
+  padding: 3%;
+  outline: none;
+  /* border: 1px solid #f8f8fd; */
+  border: 1px solid #c6c6ca;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+label {
+  font-weight: 500;
+}
