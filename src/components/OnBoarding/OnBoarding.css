@@ -11,3 +11,12 @@
   height: 10rem;
   margin-bottom: 2rem;
 }
+.tabFour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tabFourImg {
+  margin-bottom: 2rem;
+}

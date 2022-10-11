@@ -6,6 +6,7 @@ import { Card } from "../atoms/Card/Card";
 import { Text } from "../atoms/Text/Text";
 import { TextInput } from "../atoms/TextInput/TextInput";
 import "./OnBoarding.css";
+import check from "../../assets/icons/check.png";
 
 export const OnBoarding = () => {
   const [tabNumber, setTabNumber] = useState(1);
@@ -32,6 +33,7 @@ export const OnBoarding = () => {
   });
 
   const handleClick = () => {
+    console.log("inside");
     setFormState({ ...user, ...workSpace, ...usage });
     if (tabNumber === 3) setTabNumber((tab) => tab + 1);
     if (tabNumber === 4) console.log(formState);
@@ -45,9 +47,25 @@ export const OnBoarding = () => {
 
   return (
     <div>
-      <div>
-        <Text heading={tabHeadings[0].main} paragraph={tabHeadings[0].sub} />
-      </div>
+      {tabNumber < 4 && tabHeadings[tabNumber - 1].main && (
+        <div>
+          <Text
+            heading={tabHeadings[tabNumber - 1].main}
+            paragraph={tabHeadings[tabNumber - 1].sub}
+          />
+        </div>
+      )}
+
+      {/* {tabHeadings[tabNumber - 1].main && (
+        <div className={styles.tabHeader}>
+          <span className={styles.tabHeader__main}>
+            {tabHeadings[tabNumber - 1].main}
+          </span>
+          <span className={styles.tabHeader__sub}>
+            {tabHeadings[tabNumber - 1].sub}
+          </span>
+        </div>
+      )} */}
       <div>
         {tabNumber === 1 && (
           <form onSubmit={handleFormSubmit}>
@@ -113,6 +131,33 @@ export const OnBoarding = () => {
               })}
             </div>
             <Button buttonText="Create Workspace" handleClick={handleClick} />
+          </div>
+        )}
+
+        {tabNumber === 4 && (
+          <div className="tabFour">
+            <div className="tabFourImg">
+              <img src={check} alt="check" />
+            </div>
+            <span
+              style={{
+                fontSize: "2rem",
+                marginBottom: "1rem",
+                fontWeight: "600",
+              }}
+            >
+              Congratulations, {formState.displayName}!
+            </span>
+            <span
+              style={{
+                fontSize: ".9rem",
+                marginBottom: "2rem",
+                color: "#c6c6ca",
+              }}
+            >
+              You have completed onboarding, you can start using the Eden!
+            </span>
+            <Button buttonText="Launch Eden" handleClick={handleClick} />
           </div>
         )}
       </div>
