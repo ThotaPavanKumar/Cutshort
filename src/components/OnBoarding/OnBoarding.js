@@ -47,6 +47,8 @@ export const OnBoarding = () => {
 
   return (
     <div>
+      {/* <StepProgress tab={tabNumber} numberSteps={4} /> */}
+
       {tabNumber < 4 && tabHeadings[tabNumber - 1].main && (
         <div>
           <Text
@@ -56,17 +58,7 @@ export const OnBoarding = () => {
         </div>
       )}
 
-      {/* {tabHeadings[tabNumber - 1].main && (
-        <div className={styles.tabHeader}>
-          <span className={styles.tabHeader__main}>
-            {tabHeadings[tabNumber - 1].main}
-          </span>
-          <span className={styles.tabHeader__sub}>
-            {tabHeadings[tabNumber - 1].sub}
-          </span>
-        </div>
-      )} */}
-      <div>
+      <div style={{ minWidth: "550px" }}>
         {tabNumber === 1 && (
           <form onSubmit={handleFormSubmit}>
             <TextInput
@@ -137,7 +129,7 @@ export const OnBoarding = () => {
         {tabNumber === 4 && (
           <div className="tabFour">
             <div className="tabFourImg">
-              <img src={check} alt="check" />
+              <img src="https://i.ibb.co/w6sSB5J/check.png" alt="check" />
             </div>
             <span
               style={{

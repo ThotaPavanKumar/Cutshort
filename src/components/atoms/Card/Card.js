@@ -15,7 +15,11 @@ export const Card = ({ card, isActive, setUsage }) => {
       style={{ border: isActive ? "2px solid #5A4AD1" : "2px solid #e2ebf6" }}
     >
       <img
-        src={card.id === 1 ? user : group}
+        src={
+          card.id === 1
+            ? "https://i.ibb.co/fxfXtzL/user.png"
+            : "https://i.ibb.co/7v7wzrD/group.png"
+        }
         alt={card.title}
         width="20rem"
       />
