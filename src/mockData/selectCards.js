@@ -1,4 +1,4 @@
-export const usageCards = [
+export const selectCards = [
   {
     id: 1,
     title: "For myself",

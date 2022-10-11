@@ -14,3 +14,24 @@ input {
 label {
   font-weight: 500;
 }
+.workspaceURL {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.url {
+  border: 1px solid;
+  color: #c6c6ca;
+  width: 30%;
+  border-radius: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #eaedf2;
+  border-right: none;
+  height: 20px;
+  margin-top: 3px;
+}
