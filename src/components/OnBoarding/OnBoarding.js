@@ -6,7 +6,6 @@ import { Card } from "../atoms/Card/Card";
 import { Text } from "../atoms/Text/Text";
 import { TextInput } from "../atoms/TextInput/TextInput";
 import "./OnBoarding.css";
-import check from "../../assets/icons/check.png";
 
 export const OnBoarding = () => {
   const [tabNumber, setTabNumber] = useState(1);

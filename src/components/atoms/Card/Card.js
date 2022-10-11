@@ -1,7 +1,5 @@
 import React from "react";
 import "./Card.css";
-import user from "../../../assets/icons/user.png";
-import group from "../../../assets/icons/group.png";
 
 export const Card = ({ card, isActive, setUsage }) => {
   function handleCardSelect() {
