@@ -1,6 +1,11 @@
 .textContainer {
-  margin: 13% 0;
+  margin: 9% 0 1% 0;
 }
 h1 {
   text-align: center;
+}
+.paragraph {
+  text-align: center;
+  margin-top: -10px;
+  color: #9ba0ab;
 }

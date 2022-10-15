@@ -40,6 +40,7 @@ export const TextInput = ({
           autoComplete="off"
           minLength={minLength}
           maxLength={maxLength}
+          required
         />
       )}
     </div>

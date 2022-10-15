@@ -5,6 +5,7 @@ import { Button } from "../atoms/Buttons/Button";
 import { Card } from "../atoms/Card/Card";
 import { Text } from "../atoms/Text/Text";
 import { TextInput } from "../atoms/TextInput/TextInput";
+import { StepperHorizontal } from "../StepperHorizontal/StepperHorizontal";
 import "./OnBoarding.css";
 
 export const OnBoarding = () => {
@@ -32,7 +33,6 @@ export const OnBoarding = () => {
   });
 
   const handleClick = () => {
-    console.log("inside");
     setFormState({ ...user, ...workSpace, ...usage });
     if (tabNumber === 3) setTabNumber((tab) => tab + 1);
     if (tabNumber === 4) console.log(formState);
@@ -46,16 +46,18 @@ export const OnBoarding = () => {
 
   return (
     <div>
-      {/* <StepProgress tab={tabNumber} numberSteps={4} /> */}
+      <div style={{ minHeight: "200px" }}>
+        <StepperHorizontal activeStep={tabNumber} />
 
-      {tabNumber < 4 && tabHeadings[tabNumber - 1].main && (
-        <div>
-          <Text
-            heading={tabHeadings[tabNumber - 1].main}
-            paragraph={tabHeadings[tabNumber - 1].sub}
-          />
-        </div>
-      )}
+        {tabNumber < 4 && tabHeadings[tabNumber - 1].main && (
+          <>
+            <Text
+              heading={tabHeadings[tabNumber - 1].main}
+              paragraph={tabHeadings[tabNumber - 1].sub}
+            />
+          </>
+        )}
+      </div>
 
       <div style={{ minWidth: "550px" }}>
         {tabNumber === 1 && (
@@ -142,8 +144,7 @@ export const OnBoarding = () => {
             <span
               style={{
                 fontSize: ".9rem",
-                marginBottom: "2rem",
-                color: "#c6c6ca",
+                color: "#9ba0ab",
               }}
             >
               You have completed onboarding, you can start using the Eden!

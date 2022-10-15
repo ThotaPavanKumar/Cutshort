@@ -6,7 +6,7 @@ input {
   padding: 3%;
   outline: none;
   /* border: 1px solid #f8f8fd; */
-  border: 1px solid #c6c6ca;
+  border: 1px solid #9ba0ab;
   border-radius: 5px;
   margin-top: 5px;
   width: 100%;
@@ -22,8 +22,8 @@ label {
   justify-content: center;
 }
 .url {
-  border: 1px solid #c6c6ca;
-  color: #c6c6ca;
+  border: 1px solid #9ba0ab;
+  color: #9ba0ab;
   width: 40%;
   border-radius: 0.2rem;
   display: flex;

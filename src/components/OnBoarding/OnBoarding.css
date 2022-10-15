@@ -9,13 +9,14 @@
   align-items: center;
   justify-content: space-between;
   height: 10rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .tabFour {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -60px;
 }
 .tabFourImg {
   margin-bottom: 2rem;

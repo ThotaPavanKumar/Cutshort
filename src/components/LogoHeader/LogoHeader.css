@@ -3,9 +3,8 @@
   flex-direction: row;
   width: auto;
   align-items: center;
-  padding: 3rem;
-  margin-bottom: 1rem;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 .textLogo {
   font-size: 2rem;
